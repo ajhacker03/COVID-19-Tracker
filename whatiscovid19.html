@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>What is COVID19 - COVID-19tracker</title>
+		<link rel="icon" href="img/logo.svg" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/whatiscovid19.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="nav-container">
+					<div class="logo-wrapper" id="logo-redirect">
+						<img src="img/logo.svg" alt="logo" />
+						<h3>COVID-19 <span>Tracker</span></h3>
+					</div>
+					<div class="hamburger hamburger--squeeze" id="hamburger">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div id="nav-overlay" style="height: 0">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="whatiscovid19.html">What is COVID19?</a></li>
+					<li><a href="prevention.html">Prevention</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="container">
+			<div class="main-wrapper">
+				<h1>What is COVID-19?</h1>
+				<iframe
+					width="100%"
+					height="80%"
+					src="https://www.youtube.com/embed/OZcRD9fV7jo"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-wrapper">
+				<h6><span>COVID-19</span>&nbspTracker</h6>
+				<p>
+					Sources from
+					<a href="https://github.com/disease-sh/API">Novel COVID API</a>
+				</p>
+				<a href="https://github.com/ashinberish/COVID-19-tracker"
+					><i class="fab fa-github"></i
+				></a>
+			</div>
+		</footer>
+	</body>
+	<script>
+		let navoverlay = document.getElementById("nav-overlay");
+		document.getElementById("hamburger").addEventListener("click", Navtoggle);
+		function Navtoggle() {
+			if (navoverlay.style.height == "100%") {
+				navoverlay.style.height = "0%";
+			} else {
+				navoverlay.style.height = "100%";
+			}
+		}
+
+		let logo = document.getElementById("logo-redirect");
+		logo.addEventListener("click", RedirectIndex);
+		function RedirectIndex() {
+			document.location.href = "index.html";
+		}
+	</script>
+</html>
